@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 import MovieDisplay from "./components/MovieDisplay";
-import Form from "./components/Form";
+import Form from "./components/Nav";
 
 function App() {
   function generateRandomLetter() {
