@@ -1,22 +1,27 @@
 import "./App.css";
+import image1 from "./assets/blog-image-1.jpg";
+import image2 from "./assets/blog-image-2.jpg";
+import Header from "./Components/Header";
+import Article from "/Components/Article";
+import Footer from "./Components/Footer";
 
-// Import Route and our components
-import { Route, Routes } from "react-router-dom";
-import Currencies from "./pages/Currencies";
-import Main from "./pages/Main";
-import Price from "./pages/Price";
-import Nav from "./components/Nav";
-
-export default function App () {
-  // We will use the Route component, path attribute, and element attribute to specify each route.
+function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <Routes>
-        <Route path="/" element={<Main/>}/>
-        <Route path="/currencies" element={<Currencies/>}/>
-        <Route path="/price/:symbol" element={<Price/>}/>
-      </Routes>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Article
+          imgSrc={image1}
+          imgAlt={"Woman walking off screen to the right"}
+        />
+        <Article
+          imgSrc={image2}
+          imgAlt={"Woman walking off screen to the right"}
+        />
+      </main>
+      <Footer />
+    </>
   );
 }
+
+export default App;
